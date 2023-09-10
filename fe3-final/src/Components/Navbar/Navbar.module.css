@@ -1,0 +1,31 @@
+.logoNavbar {
+	width: 150px;
+}
+
+.navbarAligment {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbarAligment ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.navbarAligment ul li {
+	margin-right: 20px;
+}
+
+.navbarAligment ul li a {
+	color: rgb(5, 5, 5);
+}
+
+.navbarAligment button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20px;
+	height: 30px;
+	border-radius: 20%;
+}

@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,19 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 1024px;
+	padding-right: 2rem;
+	padding-left: 2rem;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: lightgrey;
 }
