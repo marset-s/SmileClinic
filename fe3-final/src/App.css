@@ -1,10 +1,9 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
 }
-
+/*
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -47,19 +46,10 @@ body {
 	box-sizing: border-box;
 }
 
-.container {
-	width: 1024px;
-	padding-right: 2rem;
-	padding-left: 2rem;
-	margin-right: auto;
-	margin-left: auto;
-	background-color: lightgrey;
+.dark {
+	background-color: rgba(6, 4, 11, 0.318);
 }
 
-.dark{
-  background-color: rgb(72, 18, 222);
-}
-
-.light{
-  background-color: aliceblue;
+.light {
+	background-color: aliceblue;
 }
