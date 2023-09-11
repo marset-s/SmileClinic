@@ -55,3 +55,11 @@ body {
 	margin-left: auto;
 	background-color: lightgrey;
 }
+
+.dark{
+  background-color: rgb(72, 18, 222);
+}
+
+.light{
+  background-color: aliceblue;
+}

@@ -7,13 +7,15 @@ import Contact from './Routes/Contact'
 import Home from './Routes/Home'
 import Detail from './Routes/Detail'
 import Favs from './Routes/Favs'
+import { useContextGlobal } from './Components/utils/global.context'
 
 function App() {
  
-
+  const { state } = useContextGlobal();
   return (
+    
 
-    <> 
+    <div className={`${state.theme}`}> 
             
       <Navbar/>
       <Routes>      
@@ -24,7 +26,7 @@ function App() {
       </Routes>
       <Footer/>     
       
-    </>
+    </div>
   )
 }
 
