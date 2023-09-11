@@ -20,7 +20,7 @@ const Home = () => {
 			} catch (err) {
 				console.log(err);
 			}
-		}
+		};
 		dataUsers();
 	}, []);
 
@@ -28,15 +28,19 @@ const Home = () => {
 		<main className="">
 			<h1>Home</h1>
 			<div className="card-grid">
-				{/* Aqui deberias renderizar las cards */
-        data.map((dentist) => {
-          return <Card name={dentist.name} username={dentist.username} id={dentist.id} key={dentist.id} />
-        })
-        }
-
-
-
-				
+				{
+					/* Aqui deberias renderizar las cards */
+					data.length && data.map((dentist) => {
+						return (
+							<Card
+								name={dentist.name}
+								username={dentist.username}
+								id={dentist.id}
+								key={dentist.id}
+							/>
+						);
+					})
+				}
 			</div>
 		</main>
 	);
