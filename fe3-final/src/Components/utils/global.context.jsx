@@ -1,39 +1,35 @@
-import { createContext, useContext, useReducer, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import axios from "axios";
 
+const ContextGlobal = createContext({});
 
-
-export const initialState = {theme: "light", data: []}
-
-export const ContextGlobal = createContext(initialState);
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "TOGGLE_THEME":
-      return { ...state, theme: state.theme === "light" ? "dark" : "light" };
-      default:
-      return state;
-  }
-};
-
+const getFavs = JSON.parse(localStorage.getItem("favs"));
+const initialState = getFavs ? getFavs : [];
 
 export const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
-const [data, setData] = useState([])
-const [state, dispatch] = useReducer(reducer, initialState);
+	//Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
 
-const toggleTheme = () => {
-  dispatch({ type: "TOGGLE_THEME" });
+	const [data, setData] = useState([]);
+	const [favs, setFavs] = useState(initialState);
+	const url = "https://jsonplaceholder.typicode.com/users";
+
+	useEffect(() => {
+		axios(url)
+			.then((res) => setData(res.data))
+			.catch((err) => console.log(err));
+	}, []);
+
+	useEffect(() => {
+		localStorage.setItem("favs", JSON.stringify(favs));
+	}, [favs]);
+
+	return (
+		<ContextGlobal.Provider value={{ data, setData, favs, setFavs }}>
+			{children}
+		</ContextGlobal.Provider>
+	);
 };
 
-  return (
-    <ContextGlobal.Provider value={{data, setData, state, toggleTheme}}>
-      {children}
-    </ContextGlobal.Provider>
-  );
-};
+export default ContextProvider;
 
-export default ContextProvider
-
-export const useContextGlobal = () => useContext(ContextGlobal)
-
-
+export const useContextGlobal = () => useContext(ContextGlobal);
