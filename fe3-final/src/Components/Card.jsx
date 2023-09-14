@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { useContextGlobal } from "./utils/global.context";
 
 const Card = ({ dentist }) => {
-	const { favs, setFavs } = useContextGlobal();
+	const { dispatch} = useContextGlobal();
 
 	const addFav = () => {
-		setFavs([...favs, dentist]);
+		dispatch({type: 'ADD_FAVS', payload: dentist});
 	};
 
 	return (

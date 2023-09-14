@@ -5,7 +5,14 @@ import { Link } from "react-router-dom";
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
-	const { toggleTheme } = useContextGlobal();
+	const { state, dispatch } = useContextGlobal();
+
+
+	const handleClick = () => {
+		dispatch({type: 'SWITCH_THEME', payload: state.theme});
+	};
+
+
 	return (
 		<>
 			<nav>
@@ -35,7 +42,7 @@ const Navbar = () => {
 						</li>
 						<li>
 							{/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-							<button onClick={toggleTheme}> 🌜</button>
+							<button onClick={handleClick}> {state.theme ? '🌜' : '🌞' }</button>
 						</li>
 					</ul>
 				</div>
