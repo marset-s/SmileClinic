@@ -4,6 +4,7 @@
 	--hover-font: rgb(129, 188, 197);
 	--color-button: black;
 	--hover-button: rgba(66, 62, 62, 0.918);
+	--link-background-footer: rgb(234, 255, 255);
 }
 .container {
 	max-width: 1024px;
@@ -12,6 +13,7 @@
 }
 body {
 	margin: 0;
+	margin-top: 150px;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Lato", sans-serif;
@@ -60,4 +62,14 @@ h1 {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 15px;
+}
+
+.go-back-footer {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 0.8rem 0;
+	margin-top: 5rem;
+	background-color: var(--link-background-footer);
+	font-weight: bold;
 }

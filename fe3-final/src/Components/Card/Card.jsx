@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContextGlobal } from "../utils/global.context";
 import styles from "./Card.module.css";
+import { AiTwotoneStar } from "react-icons/ai";
 
 const Card = ({ dentist }) => {
 	const { dispatch } = useContextGlobal();
@@ -24,7 +25,7 @@ const Card = ({ dentist }) => {
 
 			{/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
 			<button onClick={addFav} className="favButton button">
-				🌟
+				<AiTwotoneStar />
 			</button>
 		</article>
 	);

@@ -1,0 +1,27 @@
+.containerIcons {
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 0;
+}
+.listIcons {
+	list-style: none;
+	display: flex;
+}
+
+.listIcons li {
+	margin-right: 10px;
+	color: black;
+	font-size: 25px;
+}
+.listIcons li:hover {
+	color: var(--hover-font);
+}
+footer small {
+	display: block;
+	text-align: center;
+	color: var(--color-font);
+	margin-top: 5px;
+}
+footer {
+	margin-bottom: 20px;
+}

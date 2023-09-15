@@ -1,6 +1,7 @@
 import { useContextGlobal } from "../utils/global.context";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -42,7 +43,7 @@ const Navbar = () => {
 							{/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
 							<button onClick={handleClick} className="button">
 								{" "}
-								{state.theme ? "🌜" : "🌞"}
+								{state.theme ? <BsFillMoonStarsFill /> : <BsFillSunFill />}
 							</button>
 						</li>
 					</ul>
