@@ -1,0 +1,27 @@
+.card {
+	border: 1px solid black;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 250px;
+}
+.card > img {
+	width: 240px;
+	margin-top: 5px;
+}
+.nameDentist {
+	font-size: 1.2em;
+}
+.usernameDentist{
+	font-weight: 400;
+	font-size: 0.8em;
+}
+.card > button{
+	display: block;
+	width: 95%;
+	border-radius: 0%;
+	padding: 0.5rem;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}

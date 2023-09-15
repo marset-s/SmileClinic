@@ -54,3 +54,10 @@ h1 {
 	margin: 3rem 0;
 	color: rgb(42, 42, 42);
 }
+
+/* Card */
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 15px;
+}

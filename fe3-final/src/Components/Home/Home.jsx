@@ -1,5 +1,6 @@
-import Card from "../Components/Card";
-import { useContextGlobal } from "../Components/utils/global.context";
+import Card from "../Card/Card";
+import { useContextGlobal } from "../utils/global.context";
+import styles from "./Home.module.css"
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
