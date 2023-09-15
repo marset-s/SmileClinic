@@ -1,5 +1,10 @@
 .logoNavbar {
-	width: 150px;
+	width: 100px;
+}
+
+nav {
+	background-color: var(--background);
+	box-shadow: -9px 24px 62px -20px rgba(0, 0, 0, 0.3);
 }
 
 .navbarAligment {
@@ -14,18 +19,13 @@
 }
 
 .navbarAligment ul li {
-	margin-right: 20px;
-}
-
-.navbarAligment ul li a {
-	color: rgb(5, 5, 5);
+	margin-right: 45px;
 }
 
 .navbarAligment button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 20px;
-	height: 30px;
-	border-radius: 20%;
+	width: 40px;
+	height: 38px;
 }

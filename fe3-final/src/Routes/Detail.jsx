@@ -22,15 +22,17 @@ const Detail = () => {
 
 	return (
 		<>
-			<h1>Detail Dentist id </h1>
-			{/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
+			<section className="container">
+				<h1>Detail Dentist id </h1>
+				{/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
 
-			<h4>{state.detail.name}</h4>
-			<h4>{state.detail.email}</h4>
-			<h4>{state.detail.phone}</h4>
-			<h4>{state.detail.website}</h4>
+				<h4>{state.detail.name}</h4>
+				<h4>{state.detail.email}</h4>
+				<h4>{state.detail.phone}</h4>
+				<h4>{state.detail.website}</h4>
 
-			{/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
+				{/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
+			</section>
 		</>
 	);
 };

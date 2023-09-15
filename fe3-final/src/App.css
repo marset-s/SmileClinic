@@ -1,49 +1,21 @@
-#root {
-	max-width: 1280px;
+:root {
+	--background: rgb(234, 255, 255);
+	--color-font: rgb(99, 99, 99);
+	--hover-font: rgb(129, 188, 197);
+	--color-button: black;
+	--hover-button: rgba(66, 62, 62, 0.918);
+}
+.container {
+	max-width: 1024px;
 	margin: 0 auto;
-	padding: 2rem;
+	padding: 0 2rem;
 }
-/*
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
 body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Lato", sans-serif;
+	font-size: 18px;
 }
 
 .dark {
@@ -52,4 +24,33 @@ body {
 
 .light {
 	background-color: aliceblue;
+}
+
+/* Buttons */
+
+.button {
+	border-radius: 20%;
+	border: none;
+	background-color: var(--color-button);
+}
+.button:hover {
+	background-color: var(--hover-button);
+	cursor: pointer;
+}
+
+/* Links */
+a {
+	color: var(--color-font);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--hover-font);
+}
+
+/* Titles */
+
+h1 {
+	text-align: center;
+	margin: 3rem 0;
+	color: rgb(42, 42, 42);
 }

@@ -7,17 +7,15 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
 	const { state, dispatch } = useContextGlobal();
 
-
 	const handleClick = () => {
-		dispatch({type: 'SWITCH_THEME', payload: state.theme});
+		dispatch({ type: "SWITCH_THEME", payload: state.theme });
 	};
-
 
 	return (
 		<>
 			<nav>
 				{/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
-				<div className={`${styles.navbarAligment}`}>
+				<div className={`${styles.navbarAligment} container`}>
 					<img
 						className={`${styles.logoNavbar}`}
 						src="images/DH.png"
@@ -42,7 +40,10 @@ const Navbar = () => {
 						</li>
 						<li>
 							{/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-							<button onClick={handleClick}> {state.theme ? '🌜' : '🌞' }</button>
+							<button onClick={handleClick} className="button">
+								{" "}
+								{state.theme ? "🌜" : "🌞"}
+							</button>
 						</li>
 					</ul>
 				</div>
