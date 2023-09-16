@@ -31,9 +31,9 @@ body {
 /* Buttons */
 
 .button {
-	border-radius: 20%;
+	border-radius: 5px;
 	border: none;
-	background-color: var(--color-button);
+	
 }
 .button:hover {
 	background-color: var(--hover-button);

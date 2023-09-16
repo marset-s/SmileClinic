@@ -1,0 +1,23 @@
+form > input {
+	display: block;
+	padding: 8px 4px;
+	width: 35%;
+	margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+form > button {
+	margin-top: 15px;
+	display: block;
+    width: 36%;
+    padding: 0.5rem 4px;
+    background-color: var(--background);
+    color: var(--color-font);
+    font-weight: bold;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
