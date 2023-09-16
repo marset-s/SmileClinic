@@ -5,6 +5,7 @@ import {
 	BiLogoFacebookSquare,
 	BiLogoInstagramAlt,
 	BiLogoLinkedinSquare,
+	BiHomeSmile,
 } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
 
@@ -16,11 +17,9 @@ const Footer = () => {
 			</Link>
 			<section className="container">
 				<div className={`${styles.containerIcons}`}>
-					<img
-						src="/images/DH.png"
-						alt="DH-logo"
-						style={{ width: "120px", height: "70px" }}
-					/>
+					<span className={`${styles.logoFooter}`}>
+						<BiHomeSmile />
+					</span>
 
 					<ul className={`${styles.listIcons}`}>
 						<Link to="#">

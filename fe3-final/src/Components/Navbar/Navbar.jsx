@@ -2,6 +2,7 @@ import { useContextGlobal } from "../utils/global.context";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import {BiHomeSmile} from "react-icons/bi";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -17,11 +18,7 @@ const Navbar = () => {
 			<nav>
 				{/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
 				<div className={`${styles.navbarAligment} container`}>
-					<img
-						className={`${styles.logoNavbar}`}
-						src="images/DH.png"
-						alt="logo DH"
-					/>
+					<span className={`${styles.logoNavbar}`}><BiHomeSmile/></span>
 
 					<ul>
 						<li>

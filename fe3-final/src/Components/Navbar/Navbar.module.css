@@ -1,10 +1,10 @@
 .logoNavbar {
-	width: 100px;
+	font-size: 3em;
 }
 
 nav {
 	position: fixed;
-	width: 100%; 
+	width: 100%;
 	top: 0;
 	background-color: var(--background);
 	box-shadow: -9px 24px 62px -20px rgba(0, 0, 0, 0.3);
@@ -13,6 +13,7 @@ nav {
 .navbarAligment {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .navbarAligment ul {

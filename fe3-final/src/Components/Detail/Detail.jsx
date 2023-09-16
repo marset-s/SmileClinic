@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import { useContextGlobal } from "../Components/utils/global.context";
+import { useContextGlobal } from "../utils/global.context";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import styles from "./Detail.module.css"
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -25,13 +26,33 @@ const Detail = () => {
 			<section className="container">
 				<h1>Detail Dentist id </h1>
 				{/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-
-				<h4>{state.detail.name}</h4>
-				<h4>{state.detail.email}</h4>
-				<h4>{state.detail.phone}</h4>
-				<h4>{state.detail.website}</h4>
-
-				{/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Phone</th>
+							<th>Website</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								{state.detail.name}
+							</td>
+							<td>
+								{state.detail.email}
+							</td>
+							<td>
+								{state.detail.phone}
+							</td>
+							<td>
+								<Link to="#">{state.detail.website}</Link>{" "}
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</section>
 		</>
 	);
