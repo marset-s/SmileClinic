@@ -14,7 +14,7 @@ const Card = ({ dentist }) => {
 	return (
 		<article className={`${styles.card}`}>
 			{/* En cada card deberan mostrar en name - username y el id */}
-			<img src="images/doctor.jpg" alt="Photo Dentist" />
+			<img src="images/undraw.png" alt="Photo Dentist" />
 			<Link to={`/dentist/${dentist.id}`}>
 				<h2 className={`${styles.nameDentist}`}>{dentist.name}</h2>
 			</Link>
