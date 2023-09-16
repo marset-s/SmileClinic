@@ -20,10 +20,10 @@ const Form = () => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		// Expresión regular para validar el correo electrónico
+		
 		const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-		// Expresión regular para validar el nombre de usuario (debe contener al menos 6 caracteres)
+	
 		const nameRegex = /^[A-Za-z\s]{6,}$/;
 
 		const isValidEmail = emailRegex.test(newUser.email);
