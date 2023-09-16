@@ -48,7 +48,7 @@ const Navbar = () => {
 							{/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
 							<button onClick={handleClick} className="button icons">
 								{" "}
-								{state.theme ? <BsFillMoonStarsFill /> : <BsFillSunFill />}
+								{state.theme ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
 							</button>
 						</li>
 					</ul>
