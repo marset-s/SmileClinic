@@ -10,7 +10,7 @@
 
 .listIcons li {
 	margin-right: 10px;
-	color: black;
+	color: var(--color-icons);
 	font-size: 25px;
 }
 .listIcons li:hover {
@@ -27,4 +27,5 @@ footer {
 }
 .logoFooter {
 	font-size: 3em;
+	color: var(--color-icons);
 }

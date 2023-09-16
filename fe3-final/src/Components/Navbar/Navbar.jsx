@@ -2,7 +2,7 @@ import { useContextGlobal } from "../utils/global.context";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import {BiHomeSmile} from "react-icons/bi";
+import { BiHomeSmile } from "react-icons/bi";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -11,6 +11,12 @@ const Navbar = () => {
 
 	const handleClick = () => {
 		dispatch({ type: "SWITCH_THEME", payload: state.theme });
+		let themeRoot = document.documentElement;
+		if (!state.theme === true) {
+			themeRoot.classList.add("dark");
+		} else {
+			themeRoot.classList.remove("dark");
+		}
 	};
 
 	return (
@@ -18,7 +24,9 @@ const Navbar = () => {
 			<nav>
 				{/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
 				<div className={`${styles.navbarAligment} container`}>
-					<span className={`${styles.logoNavbar}`}><BiHomeSmile/></span>
+					<span className={`${styles.logoNavbar}`}>
+						<BiHomeSmile />
+					</span>
 
 					<ul>
 						<li>
@@ -38,7 +46,7 @@ const Navbar = () => {
 						</li>
 						<li>
 							{/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-							<button onClick={handleClick} className="button">
+							<button onClick={handleClick} className="button icons">
 								{" "}
 								{state.theme ? <BsFillMoonStarsFill /> : <BsFillSunFill />}
 							</button>
