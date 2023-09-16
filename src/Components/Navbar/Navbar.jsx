@@ -10,13 +10,13 @@ const Navbar = () => {
 	const { state, dispatch } = useContextGlobal();
 
 	const handleClick = () => {
-		dispatch({ type: "SWITCH_THEME", payload: state.theme });
 		let themeRoot = document.documentElement;
-		if (!state.theme === true) {
+		if (state.theme) {
 			themeRoot.classList.add("dark");
 		} else {
 			themeRoot.classList.remove("dark");
 		}
+		dispatch({ type: "SWITCH_THEME", payload: state.theme });
 	};
 
 	return (
